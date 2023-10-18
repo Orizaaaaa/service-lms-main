@@ -6,7 +6,7 @@ const verifyToken = require("../middlewares/verify-token");
 const admin = require("../middlewares/admin");
 
 // Get all users data
-router.get("/", verifyToken, admin, userHandler.getAllUsers);
+router.get("/", userHandler.getAllUsers);
 
 // Create a user data
 router.post("/", verifyToken, admin, userHandler.createUser);
